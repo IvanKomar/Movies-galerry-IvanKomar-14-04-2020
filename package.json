@@ -1,0 +1,15 @@
+{
+  "name": "progfrog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack ./src/index.js --output-path ./public/js --output-filename bundle.js --mode development --color --watch"
+  },
+  "author": "Ivan",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}

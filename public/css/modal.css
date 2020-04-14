@@ -1,0 +1,211 @@
+.vmodal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vmodal.open{
+  z-index: 999;
+  visibility: visible ;
+  opacity: 1;
+}
+
+.vmodal.open .modal-overlay{
+  opacity: 1;
+  z-index: 1000;
+}
+.vmodal.open .modal-window {
+
+  top: 0px;
+  opacity: 1;
+  z-index: 1001;
+  position: absolute;
+}
+
+.vmodal.hide .modal-overlay,
+.vmodal.hide .modal-window {
+  opacity: 1;
+  z-index: 1000;
+}
+
+.vmodal.open .modal-window {
+  transform: translateY(5%);
+}
+
+.vmodal.open .modal-overlay {
+  background: rgba(0, 0, 0, .5);
+}
+
+.vmodal.hide .modal-window {
+  transform: translateY(-200px);
+}
+
+.vmodal.hide .modal-overlay {
+  background: rgba(0, 0, 0, 0);
+}
+
+.modal-window, .modal-overlay {
+  opacity: 0;
+  z-index: -1;
+}
+
+.modal-overlay {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0);
+  transition: background .2s ease-in;
+}
+
+.modal-window {
+  width: 50rem;
+  width: 80%;
+  border-radius: 5px;
+  background: #fff;
+  margin: 0 auto;
+  transform: translateY(-200px);
+  transition: transform .2s ease-in;
+}
+
+.modal-header {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+}
+
+.modal-close {
+  cursor: pointer;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 36px;
+}
+
+.modal-body {
+  padding: 10px;
+}
+
+.modal-body p {
+  margin: 0 0 5px;
+}
+
+.modal-footer {
+  padding: 5px 10px;
+  border-top: 1px solid #eee;
+}
+
+.card {
+  position: relative;
+}
+.fav::after {
+  font-size: 40px;
+  content: '\2606';
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  color: rgb(255, 203, 0);
+  cursor: pointer;
+}
+
+.fav-active::after {
+  font-size: 40px;
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  cursor: pointer;
+  content: ' \2605';
+  color: rgb(255, 203, 0);
+}
+
+.list-group > li {
+  
+  list-style: none;
+  cursor: pointer;
+  border: 1px 1px 0px 1px solid black;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+}
+._fav_movie {
+  cursor: pointer;
+  max-width: 200px;
+  z-index: 998;
+}
+._fav_list_item {
+  font-size: 24px;
+  line-height: 24px;
+  z-index: 998;
+}
+._fav_movie:hover {
+  text-decoration: underline;
+}
+
+.fav-year::after {
+  font-size: 36px;
+  line-height: 45px;
+  display: inline-block;
+  content: '\2606';
+  color: rgb(255, 203, 0);
+  cursor: pointer;
+}
+
+.fav-year-active::after {
+  font-size: 36px;
+  line-height: 45px;
+  display: inline-block;
+  cursor: pointer;
+  content: ' \2605';
+  color: rgb(255, 203, 0);
+}
+.img-overlay {
+  overflow: hidden;
+  width: 238px;
+  height: 300px;
+}
+.cardImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.filter-view-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.view-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  margin-right: 50px;
+}
+.view-container > span {
+  width: 60px;
+}
+.view {
+  display: block;
+  height: 30px;
+  width: 30px;
+  margin: 0 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.view-active {
+  border: 1px solid black;
+  padding: 5px;
+}
